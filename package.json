@@ -1,0 +1,57 @@
+{
+  "name": "python-sql-highlighter",
+  "displayName": "Python SQL Highlighter",
+  "description": "高亮显示Python文件中的SQL代码",
+  "version": "0.1.0",
+  "publisher": "codelast",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#2C5BB4",
+    "theme": "dark"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onLanguage:python"
+  ],
+  "contributes": {
+    "grammars": [
+      {
+        "injectTo": [
+          "source.python"
+        ],
+        "scopeName": "inline.sql.python",
+        "path": "./syntaxes/sql-python.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codelast/sql-highlight-in-python.git"
+  },
+  "keywords": [
+    "python",
+    "sql",
+    "highlight",
+    "syntax"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codelast/sql-highlight-in-python/issues"
+  },
+  "homepage": "https://github.com/codelast/sql-highlight-in-python#readme",
+  "scripts": {
+    "vscode:prepublish": "echo 准备发布",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "main": "extension.js",
+  "directories": {
+    "example": "examples"
+  },
+  "author": "Darran Zhang"
+}
