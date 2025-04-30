@@ -14,7 +14,7 @@ conn = sqlite3.connect(':memory:')
 cursor = conn.cursor()
 
 # 创建表格
-create_table_query = """
+sql = """
 CREATE TABLE users (
     id INTEGER PRIMARY KEY,
     name TEXT NOT NULL,
@@ -23,16 +23,16 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 """
-cursor.execute(create_table_query)
+cursor.execute(sql)
 
 # 插入数据
-insert_data_query = '''
+query = '''
 INSERT INTO users (name, email, age) VALUES
     ('张三', 'zhangsan@example.com', 25),
     ('李四', 'lisi@example.com', 30),
     ('王五', 'wangwu@example.com', 22);
 '''
-cursor.execute(insert_data_query)
+cursor.execute(query)
 conn.commit()
 
 # 查询数据

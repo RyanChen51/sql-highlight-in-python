@@ -2,7 +2,7 @@
   "name": "python-sql-highlighter",
   "displayName": "Python SQL Highlighter",
   "description": "高亮显示Python文件中的SQL代码",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "publisher": "codelast",
   "engines": {
     "vscode": "^1.60.0"

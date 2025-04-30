@@ -37,7 +37,7 @@
     "sql-code-block-auto-detect": {
       "patterns": [
         {
-          "begin": "([\"']{3})\\s*(?=\\s*(?i)(?:SELECT|INSERT|UPDATE|DELETE|CREATE|ALTER|DROP|TRUNCATE|GRANT|REVOKE|COMMIT|ROLLBACK|BEGIN|WITH|MERGE|REPLACE|UNION)\\b)",
+          "begin": "(?:f)?([\"']{3})",
           "beginCaptures": {
             "1": {
               "name": "punctuation.definition.string.begin.python"
@@ -57,47 +57,7 @@
           ]
         },
         {
-          "begin": "([\"']{3})\\s*(?=.*?\\b(?i)(?:FROM|WHERE|GROUP\\s+BY|ORDER\\s+BY|HAVING|JOIN|INNER\\s+JOIN|LEFT\\s+JOIN|RIGHT\\s+JOIN|FULL\\s+JOIN|OUTER\\s+JOIN)\\b.*?\\b(?i)(?:SELECT|INSERT|UPDATE|DELETE|CREATE|ALTER|DROP)\\b)",
-          "beginCaptures": {
-            "1": {
-              "name": "punctuation.definition.string.begin.python"
-            }
-          },
-          "end": "([\"']{3})",
-          "endCaptures": {
-            "1": {
-              "name": "punctuation.definition.string.end.python"
-            }
-          },
-          "contentName": "source.sql",
-          "patterns": [
-            {
-              "include": "source.sql"
-            }
-          ]
-        },
-        {
-          "begin": "([\"']{3})\\s*(?=.*?\\b(?i)(?:TABLE|DATABASE|SCHEMA|INDEX|VIEW|PROCEDURE|FUNCTION|TRIGGER|FOREIGN\\s+KEY|PRIMARY\\s+KEY|UNIQUE\\s+KEY|CHECK\\s+CONSTRAINT)\\b)",
-          "beginCaptures": {
-            "1": {
-              "name": "punctuation.definition.string.begin.python"
-            }
-          },
-          "end": "([\"']{3})",
-          "endCaptures": {
-            "1": {
-              "name": "punctuation.definition.string.end.python"
-            }
-          },
-          "contentName": "source.sql",
-          "patterns": [
-            {
-              "include": "source.sql"
-            }
-          ]
-        },
-        {
-          "begin": "(?i)(?:^|\\s)(?:sql|query)(?:_|\\s)*(?:=|\\+=)\\s*([\"']{3})",
+          "begin": "(?i)(?:^|\\s)(?:[a-zA-Z_][a-zA-Z0-9_]*)\\s*(?:=|\\+=)\\s*(?:f)?([\"']{3})\\s*(?=[\\s\\r\\n]*(?i)(?:SELECT|INSERT|UPDATE|DELETE|CREATE|ALTER|DROP|TRUNCATE|GRANT|REVOKE|COMMIT|ROLLBACK|BEGIN|WITH|MERGE|REPLACE|UNION|FROM|WHERE|GROUP|ORDER|HAVING)\\b)",
           "beginCaptures": {
             "1": {
               "name": "punctuation.definition.string.begin.python"
