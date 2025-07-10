@@ -2,7 +2,7 @@
   "name": "python-sql-highlighter",
   "displayName": "Python SQL Highlighter",
   "description": "高亮显示Python文件中的SQL代码",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "publisher": "codelast",
   "engines": {
     "vscode": "^1.60.0"
@@ -24,6 +24,9 @@
         "injectTo": [
           "source.python"
         ],
+        "embeddedLanguages": {
+          "meta.embedded.inline.sql": "sql"
+        },
         "scopeName": "inline.sql.python",
         "path": "./syntaxes/sql-python.json"
       }

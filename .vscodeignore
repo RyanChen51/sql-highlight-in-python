@@ -1,0 +1,26 @@
+# Development files
+.cursor/
+.mypy_cache/
+examples/
+*.vsix
+
+# Documentation
+DEVELOPMENT_GUIDE.md
+CHANGELOG.md
+
+# Git
+.git/
+.gitignore
+
+# Node modules (if any)
+node_modules/
+
+# TypeScript source maps
+*.map
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db 
